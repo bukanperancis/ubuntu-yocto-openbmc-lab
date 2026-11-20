@@ -1,0 +1,31 @@
+# Build directories
+build/
+builddir/
+cmake-build-*/
+
+# Compiled binaries
+*.o
+*.a
+*.so
+*.so.*
+*.exe
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Yocto / BitBake
+tmp/
+cache/
+sstate-cache/
+downloads/
+build-*/
