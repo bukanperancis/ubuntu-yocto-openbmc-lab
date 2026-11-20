@@ -8,9 +8,21 @@ project(
     ]
 )
 
+inc = include_directories('lib')
+
+calculator_lib = shared_library(
+    'calculator',
+    'lib/calculator.cpp',
+    include_directories : inc,
+)
+
+calculator_dep = declare_dependency(
+    link_with : calculator_lib,
+    include_directories : inc,
+)
+
 executable(
     'calculator',
     'app/main.cpp',
-    'lib/calculator.cpp',
-    include_directories : include_directories('lib'),
+    dependencies : calculator_dep,
 )
